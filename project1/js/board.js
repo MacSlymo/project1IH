@@ -20,24 +20,19 @@ function deckOfCards(){
 				return cards;
 		}
 
+		//SET TOP VALUE TO 10
 
-//Created the proper game constructor
+
+//Created the proper game constructor CHECKED
 
 function GameBlackJack () {
 	this.turn = 0;
+	this.globalTurn = 0;
   this.deck = new deckOfCards();
 	this.cardsBin = [];
-	this.availableCards = [_.remove(this.deck, function(){
-		var that = this;
-		return that.cardsBin;
-	})];
-	this.dealerHand = [];
-	this.player1Hand = [];
-	this.player2Hand = [];
-	this.player1Chips = 50;
-	this.player2Chips = 50;
-	this.player1Pot = 0;
-	this.player2Pot = 0;
+	this.dealer = [];
+	this.player1 = new Player();
+	this.player2 = new Player();
   this.chips = {
 		chipOf1 : 1,
 		chipOf2 : 2,
@@ -45,30 +40,72 @@ function GameBlackJack () {
 		chipOf10 : 10
 	};
 
-//REMOVE THE DRAWN CARDS FROM DECK
+//Take a card method CHECKED
 
-	GameBlackJack.prototype.takeACard = function () {
-		var that = this;
-		var newCard = _.sample(that.deck);
-		that.cardsBin.push(newCard);
-		return newCard;
+GameBlackJack.prototype.takeACard = function (whichHand) {
+	var newCard = _.sample(this.deck);
+	var indexOfNewCard = this.deck.indexOf(newCard);
+	this.cardsBin.unshift(newCard);
+	this.deck.splice(indexOfNewCard, 1);
+	whichHand.push(newCard);
+	return newCard;
+};
+
+//Pass your turn method CHECKED
+
+GameBlackJack.prototype.passYourTurn = function () {
+	this.turn++;
+};
+
+//Reset method (end of global turn) CHECKED
+
+GameBlackJack.prototype._endOfGlobalTurn = function () {
+	this.deck = new deckOfCards();
+	this.cardsBin = [];
+	this.dealer.hand = [];
+	this.player1.hand = [];
+	this.player2.hand = [];
+	this.globalTurn++;
+};
+
+//New Game method CHECKED
+
+GameBlackJack.prototype._newGame = function () {
+  game = new GameBlackJack();
+};
+
+//Pay the bets method TO CHECK
+
+GameBlackJack.prototype._payTheBets = function (player1Hand, player2Hand) {
+	var winnings = function (whichHand) {
+	return game.whichPlayer.pot * 2;
 	};
+	game.player1.chips = game.player1.chips + winnings;
+	game.player2.chips = game.player2.chips + winnings;
+	game.player1.pot = 0;
+	game.player2.pot = 0;
+};
 
-/*
-	 GameBlackJack.prototype.bet= function () {
-		$(document).onClick('.chip', function() {
-    	var pot = $('.chip'.val());
-		});
+//Bet method TO DO WHEN CHIPS BUILT (HTML, JQUERY)
+
+GameBlackJack.prototype.bet = function (whichPot) {
+	$(document).onClick('.chip', function() {
+		var pot = $('.chip'.val()).reduce(function (a, b) {
+			return a + b;
+    });
 		return pot;
-	};
+	});
+};
 
-	GameBlackJack.prototype.pass= function () {
+//Get value of hand method TO DO
 
-	};
-*/
+
+
 
 
 }
+
+//Console testing purpose
 
 var game = new GameBlackJack();
 
