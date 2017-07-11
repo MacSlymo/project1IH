@@ -1,3 +1,39 @@
+.row.spaced {
+  height: 230px;
+}
+
+.row {
+  height: 130px;
+}
+
+.circle {
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+  margin-left: 10px;
+}
+
+.paragraph {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 35px;
+  font-weight: bold;
+}
+
+.player-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+#player1-name {
+  margin-right: 30px
+}
+
+/* Cards */
+
 .card-slot {
   height: 60px;
   width: 30px;
@@ -8,16 +44,6 @@
   margin: 0px 10px;
 }
 
-.spaced {
-  height: 250px;
-}
-
-.player-name {
-  text-align: center;
-  font-weight: bold;
-  font-size: 30px;
-}
-
 .revealed-card {
   background-color: white;
 }
@@ -26,28 +52,9 @@
   background-color: grey;
 }
 
-.circle {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: black;
-}
+/* Chips */
 
-.paragraph {
-  text-align: center;
-  vertical-align: middle;
-  padding-top: 50px;
-  font-weight: bold;
-}
-
-#croupier-logo {
-  height: auto;
+.chip {
+  height: 70px;
   width: auto;
-  padding: 0% 40%;
-}
-
-#croupier-cards {
-  margin: 20px 15px 0px;
-  padding: 0% 30%;
 }

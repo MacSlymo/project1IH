@@ -9,7 +9,7 @@ var Player = function () {
   this.has21 = false;
 };
 
-//Value of hand method CHECKED
+//Get the value of the hand
 
 Player.prototype.totalValueInHand = function() {
 	var result = 0;
@@ -21,15 +21,6 @@ Player.prototype.totalValueInHand = function() {
 };
 
 
-
-/*
-GameBlackJack.prototype._getValueOfHand = function () {
-	var
-  for (i = 0; i < playersArray.length; i++) {
-		return _.find (playersHand, {value});
-	};
-
-*/
 
 //Console testing purpose
 

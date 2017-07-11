@@ -1,3 +1,6 @@
+//DEALER CLASS
+
+
 var Dealer = function () {
 	this.hand = [];
 	this.handValue = 0;
@@ -7,7 +10,7 @@ var Dealer = function () {
   this.has21 = false;
 };
 
-//Value of hand method CHECKED
+//Get the value of the hand
 
 Dealer.prototype.totalValueInHand = function() {
 	var result = 0;
@@ -17,6 +20,8 @@ Dealer.prototype.totalValueInHand = function() {
 	this.handValue = result;
 	return result;
 };
+
+//Tells when the dealer draw a card
 
 Dealer.prototype.dealerProcess = function () {
   if (game.dealer.handValue < 17) {

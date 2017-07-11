@@ -24,7 +24,7 @@ function deckOfCards(){
 		//SET TOP VALUE TO 10
 
 
-//Created the proper game constructor CHECKED
+//Class for a new game
 
 function GameBlackJack () {
 	this.turn = 0;
@@ -41,7 +41,7 @@ function GameBlackJack () {
 		chipOf10 : 10
 	};
 
-//Take a card method CHECKED
+//Take a random card in the deck and remove it from the deck
 
 GameBlackJack.prototype.takeACard = function (whichHand) {
 	var newCard = _.sample(this.deck);
@@ -52,13 +52,13 @@ GameBlackJack.prototype.takeACard = function (whichHand) {
 	return newCard;
 };
 
-//Pass your turn method CHECKED
+//Pass your turn
 
 GameBlackJack.prototype.passYourTurn = function () {
 	this.turn++;
 };
 
-//Reset method (end of global turn) CHECKED
+//End of each turn (2 players + dealer have played)
 
 GameBlackJack.prototype._endOfGlobalTurn = function () {
 	this.deck = new deckOfCards();
@@ -69,13 +69,13 @@ GameBlackJack.prototype._endOfGlobalTurn = function () {
 	this.globalTurn++;
 };
 
-//New Game method CHECKED
+//Restart a new game
 
 GameBlackJack.prototype.newGame = function () {
   game = new GameBlackJack();
 };
 
-//Pay the bets method TO CHECK
+//According to your hand, get paid or lose your bet
 
 GameBlackJack.prototype._payTheBets = function (whichPlayer) {
 	var winnings = function (whichPlayer) {
@@ -103,38 +103,48 @@ GameBlackJack.prototype.bet = function (whichPot) {
 	});
 };
 
-//Game setup method TO ADAPT
+//The game's flow TO DO
 
 GameBlackJack.prototype._newRound = function () {
-  var that = this;
-  $('.row:first .cell').each(function (i, cell) {
-    $(cell).click(function () {
-      if (that.addToken(i)) that.turn++;
-      that.render();
-		});
+	game.takeACard(game.dealer.hand);
+	game.takeACard(game.dealer.hand);
+	game.takeACard(game.player1.hand);
+	game.takeACard(game.player2.hand);
+	//Players Bet
+	//Player 1 asks for cards OR bets
+	this.turn++;
+	//Player 2 asks for cards OR bets
+	this.turn++;
+	//Dealer turn over his hidden cards
+	game.dealer.dealerProcess();
+	game._payTheBets(game.player1);
+	game._payTheBets(game.player2);
+	this.turn++;
+	};
 
-//Render method TO ADAPT
+//Render the game TO DO
 
 GameBlackJack.prototype._render = function () {
-  this.grid.forEach(function (row) {
-    console.log(row);
-  });
 
-  var that = this;
-
-  $('.row').each(function (y, row) {
-    $(row).children().each(function (x, cell) {
-      cell = $(cell);
-      if (that.grid[y][x]) {
-        cell.addClass(that.grid[y][x].color);
-      }
-    });
-  });
 };
 
+/*
+this.grid.forEach(function (row) {
+	console.log(row);
 });
 
-};
+var that = this;
+
+$('.row').each(function (y, row) {
+	$(row).children().each(function (x, cell) {
+		cell = $(cell);
+		if (that.grid[y][x]) {
+			cell.addClass(that.grid[y][x].color);
+		}
+	});
+});
+*/
+
 
 }
 //Console testing purpose
