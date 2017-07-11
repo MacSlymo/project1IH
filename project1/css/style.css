@@ -1,5 +1,53 @@
-.test {
-  height: 200px;
-  width: 200px;
-  background-color: yellow;
+.card-slot {
+  height: 60px;
+  width: 30px;
+  border-radius: 20%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  margin: 0px 10px;
+}
+
+.spaced {
+  height: 250px;
+}
+
+.player-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.revealed-card {
+  background-color: white;
+}
+
+.hidden-card {
+  background-color: grey;
+}
+
+.circle {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+}
+
+.paragraph {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 50px;
+  font-weight: bold;
+}
+
+#croupier-logo {
+  height: auto;
+  width: auto;
+  padding: 0% 40%;
+}
+
+#croupier-cards {
+  margin: 20px 15px 0px;
+  padding: 0% 30%;
 }

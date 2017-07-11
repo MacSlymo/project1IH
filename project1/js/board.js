@@ -20,6 +20,7 @@ function deckOfCards(){
 				return cards;
 		}
 
+
 		//SET TOP VALUE TO 10
 
 
@@ -30,7 +31,7 @@ function GameBlackJack () {
 	this.globalTurn = 0;
   this.deck = new deckOfCards();
 	this.cardsBin = [];
-	this.dealer = [];
+	this.dealer = new Dealer();
 	this.player1 = new Player();
 	this.player2 = new Player();
   this.chips = {
@@ -70,21 +71,26 @@ GameBlackJack.prototype._endOfGlobalTurn = function () {
 
 //New Game method CHECKED
 
-GameBlackJack.prototype._newGame = function () {
+GameBlackJack.prototype.newGame = function () {
   game = new GameBlackJack();
 };
 
 //Pay the bets method TO CHECK
 
-GameBlackJack.prototype._payTheBets = function (player1Hand, player2Hand) {
-	var winnings = function (whichHand) {
+GameBlackJack.prototype._payTheBets = function (whichPlayer) {
+	var winnings = function (whichPlayer) {
 	return game.whichPlayer.pot * 2;
 	};
-	game.player1.chips = game.player1.chips + winnings;
-	game.player2.chips = game.player2.chips + winnings;
-	game.player1.pot = 0;
-	game.player2.pot = 0;
-};
+	if (this.whichPlayer.handValue > this.dealer.handValue) {
+		game.whichPlayer.chips = game.whichPlayer.chips + winnings;
+		game.whichPlayer.pot = 0;
+	} else if (this.whichPlayer.handValue > this.dealer.handValue || this.whichPlayer.handValue > 21) {
+					game.whichPlayer.pot = 0;
+	} else if (this.whichPlayer.handValue === 21) {
+					game.whichPlayer.chips = game.whichPlayer.chips + winnings * 1.25;
+					game.whichPlayer.pot = 0;
+				}
+			};
 
 //Bet method TO DO WHEN CHIPS BUILT (HTML, JQUERY)
 
@@ -97,14 +103,40 @@ GameBlackJack.prototype.bet = function (whichPot) {
 	});
 };
 
-//Get value of hand method TO DO
+//Game setup method TO ADAPT
 
+GameBlackJack.prototype._newRound = function () {
+  var that = this;
+  $('.row:first .cell').each(function (i, cell) {
+    $(cell).click(function () {
+      if (that.addToken(i)) that.turn++;
+      that.render();
+		});
 
+//Render method TO ADAPT
 
+GameBlackJack.prototype._render = function () {
+  this.grid.forEach(function (row) {
+    console.log(row);
+  });
 
+  var that = this;
+
+  $('.row').each(function (y, row) {
+    $(row).children().each(function (x, cell) {
+      cell = $(cell);
+      if (that.grid[y][x]) {
+        cell.addClass(that.grid[y][x].color);
+      }
+    });
+  });
+};
+
+});
+
+};
 
 }
-
 //Console testing purpose
 
 var game = new GameBlackJack();

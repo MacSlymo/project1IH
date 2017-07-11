@@ -3,21 +3,127 @@
 <head>
   <meta charset="utf-8">
   <title>Titre de la page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-<div class="test"></div>
+
+
+    <div class="row spaced">
+      <div class="col-xs-2">
+      </div>
+      <div class="col-xs-8">
+        <img id="croupier-logo" src="img/croupier.jpg" alt="croupier-logo">
+      </div>
+      <div class="col-xs-2">
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="row spaced">
+      <div class="col-xs-6 centered">
+        <div class="col-xs-6 card-slot revealed-card"></div>
+        <div class="col-xs-6 card-slot hidden-card"></div>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-xs-6 circle">
+          <p class="paragraph">Player 1 Pot</p>
+        </div>
+        <div class="col-xs-6 circle">
+          <p class="paragraph">Player 2 Pot</p>
+        </div>
+      ></div>
+
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="col-xs-6 card-slot revealed-card"></div>
+      <div class="col-xs-6 card-slot revealed-card"></div>
+    </div>
+    <div class="col-xs-6">
+      <div class="col-xs-6 card-slot revealed-card"></div>
+      <div class="col-xs-6 card-slot revealed-card"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="col-xs-6">
+        <p id="player1" class="player-name">BOBY</p>
+      </div>
+      <div class="col-xs-6"></div>
+    </div>
+    <div class="col-xs-6">
+      <div class="col-xs-6"></div>
+      <div class="col-xs-6">
+        <p id="player2" class="player-name">BILLY</p>
+      </div>
+      <div class="col-xs-6"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="col-xs-3 chip1">
+        <img class="chip" src="img/chip1.png" alt="1$ Chip">
+      </div>
+      <div class="col-xs-3 chip2">
+        <img class="chip" src="img/chip2.png" alt="1$ Chip">
+      </div>
+      <div class="col-xs-3 chip5">
+        <img class="chip" src="img/chip5.png" alt="1$ Chip">
+      </div>
+      <div class="col-xs-3 chip10">
+        <img class="chip" src="img/chip10.png" alt="1$ Chip">
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="col-xs-3 chip1">
+        <img class="chip" src="img/chip1.png" alt="1$ Chip">
+      </div>
+      <div class="col-xs-3 chip2">
+        <img class="chip" src="img/chip2.png" alt="1$ Chip">
+      </div>
+      <div class="col-xs-3 chip5">
+        <img class="chip" src="img/chip5.png" alt="1$ Chip">
+      </div>
+      <div class="col-xs-3 chip10">
+        <img class="chip" src="img/chip10.png" alt="1$ Chip">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <script src="lib/jquery-3.2.1.slim.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="lib/lodash.js"></script>
   <script src="js/index.js"></script>
   <script src="js/players.js"></script>
   <script src="js/dealer.js"></script>
   <script src="js/board.js"></script>
-
-
 
 </body>
 </html>
