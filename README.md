@@ -35,3 +35,20 @@ Completed a few simple methods of the board.
 By the end of the day, I realised it would be simpler to have one .js file for the BOARD, one for the PLAYER, and one for the DEALER.
 
 Little problem with the order of my scripts in the HTML: I need the player and dealer constructors for my GameBLackJack constructor, so I put the player and dealer files on top of the board file in my HTML.
+
+Day 3 :
+
+Bumps on the road. Apart from personal issues that prevented me from dedicating myself 100% to the project, I got lost in my project. I could not find the logic of my work anymore. I felt stuck and a bit panicked.
+I decided to be decisive. I decided to reset my work. 
+
+First the organization of my files. I need one .js file, because it feels more logical to me. 
+Secondly, I first built my layout. And then, depending on how I wanted to manipulate it, I added what was needed.
+Ultimately, I decided to keep the logic of the game, but going through our classes from week 1 and 2, I felt like I needed to change the form of it. And concerning clarity, I decided to risk repetition at first, if it could allow me to be clear in my head. I could always refactor it later.
+
+Focused on making 1 player works. Then I would seek to implement player 2 .
+
+Day 4 :
+
+After the work of the previous day, and very smart way to display the cards in my game, found on the internet (only on png files with all the cards, where we select the part we want to display), I decided to rework the logic. Keeping the names of my method, and clarifying the ones I felt were not very clear, I spent the majority of my day on it.
+
+... to be continued
