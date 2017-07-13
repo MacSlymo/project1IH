@@ -1,5 +1,34 @@
-//Created a deck of cards using constructor
-//(good training for constructors and loops)
+
+$(function() {
+	$(".btn-name1").on("click", function() {
+		$("#name1-holder").replaceWith("<b>"+$("#name1-holder").val()+"</b>");
+		$(".btn-name1").remove();
+		$("#name1-holder").css({textAlign: "center"}); // DOES NOT WORK
+	});
+});
+
+$(function() {
+	$(".btn-name2").on("click", function() {
+		$("#name2-holder").replaceWith("<b>"+$("#name2-holder").val()+"</b>");
+		$(".btn-name2").remove();
+		$("#name2-holder").css({textAlign: "center"}); // DOES NOT WORK
+	});
+});
+
+$(function() {
+	var that= this;
+	$(".chip.chipP1").on("click", function() {
+  	that.player1.pot += $(this).val();
+		$("#player1-pot").val().replace(that.player1.pot);
+	});
+});
+
+$(function() {
+	$(".chip.chipP2").on("click", function() {
+
+	});
+});
+
 
 function card(value, name, suit){
 	this.value = value;
@@ -110,6 +139,9 @@ GameBlackJack.prototype._newRound = function () {
 	game.takeACard(game.dealer.hand);
 	game.takeACard(game.player1.hand);
 	game.takeACard(game.player2.hand);
+	$(document).ready(function() {
+		$(".value1").click
+	});
 	//Players Bet
 	//Player 1 asks for cards OR bets
 	this.turn++;
@@ -125,7 +157,10 @@ GameBlackJack.prototype._newRound = function () {
 //Render the game TO DO
 
 GameBlackJack.prototype._render = function () {
+	setInterval(renderTheGame, 33);
+	function renderTheGame() {
 
+	}
 };
 
 /*

@@ -1,9 +1,19 @@
+
+
 .row.spaced {
   height: 230px;
 }
 
+.row.very-little-spaced {
+  height: 50px;
+}
+
 .row {
-  height: 130px;
+  height: 120px;
+}
+
+.push-up {
+  margin-bottom: 50px;
 }
 
 .circle {
@@ -18,7 +28,13 @@
 .paragraph {
   text-align: center;
   vertical-align: middle;
-  padding-top: 35px;
+  padding-top: 25px;
+  font-weight: bold;
+}
+
+.sub-paragraph {
+  text-align: center;
+  vertical-align: middle;
   font-weight: bold;
 }
 
@@ -30,6 +46,9 @@
 
 #player1-name {
   margin-right: 30px
+}
+
+#name1-holder {
 }
 
 /* Cards */
