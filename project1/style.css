@@ -21,16 +21,29 @@ body{
 	padding-top: 15px
 }
 
-.clear{
+.clear {
 	clear: both;
 }
 
-.page{
+.page {
 	width: 960px;
 	margin: 0 auto;
 	background-color: #fff;
 	min-height: 500px;
 	text-align: center;
+}
+
+.card2 {
+	padding-bottom: : 10px;
+}
+
+.card-zone{
+	height: 163px;
+}
+
+#player2-cards {
+	position: relative;
+	bottom: 10px;
 }
 
 .dealer-cards .card, #player1-cards .card, #player2-cards .card {
@@ -46,8 +59,8 @@ body{
 }
 
 .dealer-cards, #player1-cards, #player2-cards{
-	padding-top: 10px;
-	width: 164px;
+	padding-top: 20px;
+	width: 169px;
 	margin: 0 auto;
 }
 
@@ -74,7 +87,6 @@ body{
 	font: bold 13px Helvetica;
 	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
 	border-radius: 5px;
-	-moz-border-radius: 5px;
 	display: inline-block;
 	color: white;
 	white-space: nowrap;
