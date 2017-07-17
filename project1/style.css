@@ -8,17 +8,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	vertical-align:baseline;
 }
 
+/* General */
 body{
 	font-family: Arial, Helvetica, sans-serif;
 	color: #333;
 	font-size: 15px;
 	line-height: 20px;
 	background-color: #909090;
-}
-
-#title-div {
-	text-align: center;
-	padding-top: 15px
 }
 
 .clear {
@@ -32,6 +28,14 @@ body{
 	min-height: 500px;
 	text-align: center;
 }
+
+/* Title */
+#title-div {
+	text-align: center;
+	padding-top: 15px
+}
+
+/* CARDS */
 
 .card2 {
 	padding-bottom: : 10px;
@@ -68,6 +72,23 @@ body{
 	margin-top: 10px;
 }
 
+#flipped{
+	background-position: -158px -492px
+}
+
+.card {
+    background-image: url(images/cards.png);
+    float: left;
+    height: 123px;
+    width: 79px;
+}
+
+
+.dealer-total{
+	visibility: hidden;
+}
+
+/* Buttons (hit + stand)*/
  .buttons{
 	width: 210px;
 	margin: 20px auto 0 auto;
@@ -77,11 +98,6 @@ body{
 	width: 210px;
 	margin: 20px auto 0 auto;
  }
-
-.flipped{
-	background-position: -158px -492px
-}
-
 
 .btn {
 	font: bold 13px Helvetica;
@@ -113,24 +129,7 @@ body{
 	background-color: #7c0d3e;
 }
 
-.card {
-    background-image: url(images/cards.png);
-    float: left;
-    height: 123px;
-    width: 79px;
-}
-
-.message{
-	font-size: 25px;
-	margin-top: 30px;
-	height: 60px;
-}
-
-.dealer-total{
-	visibility: hidden;
-}
-
-
+/* Bets + Money */
 .bet{
 	width: 50px;
 	margin: 0 auto;
@@ -166,6 +165,17 @@ body{
 	font-size: 24px;
 	color: green;
 }
+
+
+/* Message Zone */
+.message{
+	font-size: 25px;
+	margin-top: 30px;
+	height: 60px;
+}
+
+
+/* CARDS BANK */
 
 /* Clubs */
 .ace-of-clubs{
@@ -221,8 +231,6 @@ body{
 }
 
 
-
-
 /* Spades */
 .ace-of-spades{
 	background-position: 0 -123px;
@@ -275,7 +283,6 @@ body{
 .king-of-spades{
 	background-position: -948px -123px;
 }
-
 
 
 /* Hearts */
