@@ -23,6 +23,7 @@ body{
 
 .page {
 	width: 100%;
+	min-width: 300px;
 	margin: 0 auto;
 	background-color: #fff;
 	min-height: 500px;
@@ -32,7 +33,8 @@ body{
 /* Title */
 #title-div {
 	text-align: center;
-	padding-top: 15px
+	padding-top: 15px;
+	font-family: fantasy;
 }
 
 /* CARDS */
@@ -108,7 +110,7 @@ body{
 	white-space: nowrap;
 	text-decoration: none;
 	cursor: pointer;
-	background-color: #A9014B;
+	background-color: #e97e11;
 	border-style: none;
 	text-align: center;
 	overflow: visible;
@@ -122,11 +124,11 @@ body{
 .btn:focus {
 	background-position: 0 -50px;
 	color: white;
-	background-color: #c90059;
+	background-color: #e97e11;
 }
 
 .btn:active {
-	background-color: #7c0d3e;
+	background-color: #e97e11;
 }
 
 /* Bets + Money */
@@ -144,26 +146,30 @@ body{
 .betting-area #more{
 	float: left;
 	width: 50px;
+	margin-top: 20px;
 }
 
 .betting-area #less{
 	float: left;
 	width: 50px;
+	margin-top: 20px;
 }
 
 .betting-area #more2{
 	float: left;
 	width: 50px;
+	margin-top: 20px;
 }
 
 .betting-area #less2{
 	float: left;
 	width: 50px;
+	margin-top: 20px;
 }
 
 .money{
 	font-size: 24px;
-	color: green;
+	color:#1D4E69;
 }
 
 
@@ -171,9 +177,23 @@ body{
 .message{
 	font-size: 25px;
 	margin-top: 30px;
-	height: 60px;
+	height: 10px;
 }
 
+.hidden-messages {
+	height: 50px;
+}
+
+/*Rules*/
+#rules-title {
+	text-align: left;
+	font-size: 20px;
+}
+
+#rules {
+	text-align: left;
+	font-size: 16px;
+}
 
 /* CARDS BANK */
 

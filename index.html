@@ -70,18 +70,19 @@
 
 	<div class="row money-zone">
 		<div class="col-xs-5">
+
     	<div id="betting-area1" class='betting-area'>
     		<b>Player 1 Bet</b><br />
     		<div id='bet' class='bet money'>0</div>
+				<div>
+	    		<b>Money</b><br />
+	    		<span id='money' class='money'>200</span>
+	    		<div class='clear'></div>
+	    	</div>
     		<div>
       		<div class='btn btn-secondary' id='more'>+</div>
       		<div class='btn btn-secondary' id='less'>-</div>
 	    	</div>
-    		<div class='clear'></div>
-    	</div>
-			<div>
-    		<b>Available Funds</b><br />
-    		<span id='money' class='money'>200</span>
     		<div class='clear'></div>
     	</div>
       <div class='clear'></div>
@@ -91,15 +92,15 @@
     	<div id="betting-area2" class='betting-area'>
     		<b>Player 2 Bet</b><br />
     		<div id='bet2' class='bet money'>0</div>
+				<div>
+	    		<b>Money</b><br />
+	    		<span id='money2' class='money'>200</span>
+	    		<div class='clear'></div>
+	    	</div>
     		<div>
       		<div class='btn btn-secondary' id='more2'>+</div>
       		<div class='btn btn-secondary' id='less2'>-</div>
 	    	</div>
-    		<div class='clear'></div>
-    	</div>
-			<div>
-    		<b>Available Funds</b><br />
-    		<span id='money2' class='money'>200</span>
     		<div class='clear'></div>
     	</div>
 		</div>
@@ -107,7 +108,7 @@
 	</div>
 
 
-	<div class="row">
+	<div class="row hidden-messages">
 		<div class="col-xs-5">
 	    <div id='message' class='message'></div>
 		</div>
@@ -117,6 +118,23 @@
 		</div>
 		<div class="col-xs-1"></div>
 	</div>
+
+	<div class="row">
+		<div class="col-xs-3"> </div>
+		<div id="rules" class="col-xs-7">
+			<em id="rules-title">The game sequence: (stay below 21 but above the dealer)</em>
+			<br></br>
+			<ol>
+				<li>Player 1 bets (+ or -), then "HITS" cards (or not), then "STAND" to finish your turn.</li>
+				<li>Player 2 bets (+ or -), then "HITS" cards (or not), then "STAND" to finish your turn.</li>
+				<li>The dealer reveals his second card and hits cards as long as his score is under 17.</li>
+				<li>Hit "NEW ROUND" to start the next round.</li>
+			</ol>
+		</div>
+		<div class="col-xs-2"> </div>
+	</div>
+
+
 
 
 <script
